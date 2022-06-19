@@ -26,12 +26,13 @@ namespace FordFulkersonAlgo
                 usedVertices.Add(v);
                 List<VertexMark> marks = new List<VertexMark>();    // метки маршрута
 
+
                 while (v != targetVertex)                            // выполняем пока не дошли до стока
                 {
                     j = GetMaxVertex(v, usedVertices);
                     if(j == -1)                                     // если не удалось выбрать следующую вершину
                     {
-                        if(v == targetVertex)                       // если мы еще в истоке, то заканчиваем работу алгоритма
+                        if(v == sourceVertex)                       // если мы еще в истоке, то заканчиваем работу алгоритма
                         {
                             break;
                         }
@@ -72,7 +73,12 @@ namespace FordFulkersonAlgo
 
                 }
             }
-            return 0;
+            int res = 0;
+            foreach(var route in routes)
+            {
+                res += route.MaxFlow;
+            }
+            return res;
         }
 
         private void Update(List<VertexMark> marks, int maxRouteFlow)       // обновляем пропускнуые способности для потоков
@@ -88,13 +94,26 @@ namespace FordFulkersonAlgo
                     {
                         foreach(var v in vertex.Connections)
                         {
-                            if(v.VertexNumber == endVertex)
+                            if (v.VertexNumber == endVertex)
                             {
                                 vertices[i].Connections.Where(ver => ver.VertexNumber == v.VertexNumber).First().CapacityTo -= maxRouteFlow;
-
+                                vertices[i].Connections.Where(ver => ver.VertexNumber == v.VertexNumber).First().CapacityFrom += maxRouteFlow;
                             }
                         }
                     }
+                    
+                    else if(vertex.VertexNumber == endVertex)
+                    {
+                        foreach (var v in vertex.Connections)
+                        {
+                            if (v.VertexNumber == startVertex)
+                            {
+                                vertices[i].Connections.Where(ver => ver.VertexNumber == v.VertexNumber).First().CapacityTo += maxRouteFlow;
+                                vertices[i].Connections.Where(ver => ver.VertexNumber == v.VertexNumber).First().CapacityFrom -= maxRouteFlow;
+                            }
+                        }
+                    }
+                    
                     i++;
                 }
             }
@@ -110,7 +129,8 @@ namespace FordFulkersonAlgo
             {
                 if (usedVertices.Contains(V.VertexNumber))
                     continue;
-                return V.VertexNumber;
+                if(V.CapacityTo > 0)
+                    return V.VertexNumber;
             }
             return -1;
         }
@@ -134,7 +154,7 @@ namespace FordFulkersonAlgo
             Console.Write("Target vertex: ");
             targetVertex = Convert.ToInt32(Console.ReadLine());
         }
-        struct ConnectedVertex                      // вершина, которая связана с рассматриваемой вершиной
+        class ConnectedVertex                      // вершина, которая связана с рассматриваемой вершиной
         {
             public int VertexNumber { get; set; }   // номер вершины
             public int CapacityFrom { get; set; }   // пропускная способность от вершины
@@ -166,7 +186,7 @@ namespace FordFulkersonAlgo
                 {
                     res += vertex + " --> ";
                 }
-                res += MaxFlow;
+                res += "Максимальный поток маршрута: " + MaxFlow;
                 return res;
             }
 
