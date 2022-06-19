@@ -13,7 +13,7 @@ namespace FordFulkersonAlgo
         {
             FordFulkersonAlgo algo = new FordFulkersonAlgo();
             algo.GetData();
-            Console.WriteLine("Максимальный поток сети: " + algo.GetMaxGraphFlow());
+            Console.WriteLine("Max network flow: " + algo.GetMaxGraphFlow());
 
         }
 

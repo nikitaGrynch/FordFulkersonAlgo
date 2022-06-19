@@ -10,13 +10,13 @@ namespace FordFulkersonAlgo
 {
     internal class FordFulkersonAlgo
     {
-        private Vertex[] vertices;
-        private int sourceVertex;
-        private int targetVertex;
+        private Vertex[] vertices;  // вершины графа
+        private int sourceVertex;   // исток
+        private int targetVertex;   // сток
 
         public int GetMaxGraphFlow()
         {
-            List<Route> routes = new List<Route>();
+            List<Route> routes = new List<Route>();                 // список всех маршрутов
 
             int j = sourceVertex;
             while (j != -1)
@@ -52,9 +52,9 @@ namespace FordFulkersonAlgo
                     
                     if(j == targetVertex)                           // если дошли до стока
                     {
-                        int maxFlow = GetMaxRouteFlow(marks);                     // ищем максимальную пропускную способность в маршруте
+                        int maxFlow = GetMaxRouteFlow(marks);       // ищем максимальную пропускную способность в маршруте
 
-                        routes.Add(new Route
+                        routes.Add(new Route                        // добовляем маршрут в список всех марщрутов
                         {
                             MaxFlow = maxFlow,
                             Vertices = new List<int>()
@@ -120,14 +120,14 @@ namespace FordFulkersonAlgo
         }
 
 
-        private int GetMaxVertex(int currentVertex, List<int> usedVertices)
+        private int GetMaxVertex(int currentVertex, List<int> usedVertices)     // выбираем вершину, максимальный поток пути к которой будет наибольшим
         {
             if (currentVertex == targetVertex)
                 return -1;
             var Vs = vertices[currentVertex - 1].Connections.OrderByDescending(v => v.CapacityTo);     // сортируем доступные вершины по пропускной спобности
             foreach(var V in Vs)
             {
-                if (usedVertices.Contains(V.VertexNumber))
+                if (usedVertices.Contains(V.VertexNumber))      // если вершина уже была рассмотрена ранее
                     continue;
                 if(V.CapacityTo > 0)
                     return V.VertexNumber;
@@ -135,13 +135,13 @@ namespace FordFulkersonAlgo
             return -1;
         }
 
-        private int GetMaxRouteFlow(List<VertexMark> marks)
+        private int GetMaxRouteFlow(List<VertexMark> marks)     // получение максимального потока маршрута
         {
             return marks.OrderBy(m => m.Capacity).First().Capacity;
 
         }
 
-        public void GetData()
+        public void GetData()   // получение входных данных: граф, исток, сток
         {
 
             using (var jsonFile = new StreamReader("ser.json"))
@@ -186,8 +186,9 @@ namespace FordFulkersonAlgo
                 {
                     res += vertex + " --> ";
                 }
-                res += "Максимальный поток маршрута: " + MaxFlow;
+                res += "Max route flow: " + MaxFlow;
                 return res;
+
             }
 
         }
