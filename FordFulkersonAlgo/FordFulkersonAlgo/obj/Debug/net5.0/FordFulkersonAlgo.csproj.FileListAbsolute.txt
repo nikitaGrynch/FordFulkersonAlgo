@@ -1,0 +1,16 @@
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.exe
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.deps.json
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.runtimeconfig.json
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.runtimeconfig.dev.json
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.dll
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\ref\FordFulkersonAlgo.dll
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\bin\Debug\net5.0\FordFulkersonAlgo.pdb
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.csproj.AssemblyReference.cache
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.AssemblyInfoInputs.cache
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.AssemblyInfo.cs
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.csproj.CoreCompileInputs.cache
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.dll
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\ref\FordFulkersonAlgo.dll
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.pdb
+C:\Users\grynch\source\repos\nikitaGrynch\FordFulkersonAlgo\FordFulkersonAlgo\FordFulkersonAlgo\obj\Debug\net5.0\FordFulkersonAlgo.genruntimeconfig.cache

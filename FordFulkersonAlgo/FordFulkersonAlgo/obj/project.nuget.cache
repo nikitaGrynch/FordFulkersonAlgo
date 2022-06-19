@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "M8bQ5wc5c8SzS8RDCGl+MFHc+cIuGjgg5Q0bjrgbuCi4UNarQOphXiJQCZNKyJv8ozuTUyw0fQKqt9l/wsUJRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\grynch\\source\\repos\\nikitaGrynch\\FordFulkersonAlgo\\FordFulkersonAlgo\\FordFulkersonAlgo\\FordFulkersonAlgo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\grynch\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\grynch\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\grynch\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\grynch\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

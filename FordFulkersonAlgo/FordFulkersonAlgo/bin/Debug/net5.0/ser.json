@@ -1,0 +1,137 @@
+[
+{
+	"VertexNumber":1,
+	"Connections":[
+		{
+		"VertexNumber":2,
+		"CapacityFrom":36,
+		"CapacityTo":24
+		},
+		{
+		"VertexNumber":4,
+		"CapacityFrom":17,
+		"CapacityTo":41
+		},
+		{
+		"VertexNumber":5,
+		"CapacityFrom":15,
+		"CapacityTo":24
+		}
+	]
+},
+{
+	"VertexNumber":2,
+	"Connections":[
+		{
+		"VertexNumber":1,
+		"CapacityFrom":24,
+		"CapacityTo":36
+		},
+		{
+		"VertexNumber":3,
+		"CapacityFrom":26,
+		"CapacityTo":40
+		}
+	]
+},
+{
+	"VertexNumber":3,
+	"Connections":[
+		{
+		"VertexNumber":2,
+		"CapacityFrom":40,
+		"CapacityTo":26
+		},
+		{
+		"VertexNumber":4,
+		"CapacityFrom":14,
+		"CapacityTo":4
+		},
+		{
+		"VertexNumber":7,
+		"CapacityFrom":12,
+		"CapacityTo":10
+		}
+	]
+},
+{
+	"VertexNumber":4,
+	"Connections":[
+		{
+		"VertexNumber":1,
+		"CapacityFrom":41,
+		"CapacityTo":17
+		},
+		{
+		"VertexNumber":3,
+		"CapacityFrom":4,
+		"CapacityTo":14
+		},
+		{
+		"VertexNumber":5,
+		"CapacityFrom":12,
+		"CapacityTo":16
+		},
+		{
+		"VertexNumber":6,
+		"CapacityFrom":12,
+		"CapacityTo":19
+		}
+	]
+},
+{
+	"VertexNumber":5,
+	"Connections":[
+		{
+		"VertexNumber":1,
+		"CapacityFrom":24,
+		"CapacityTo":15
+		},
+		{
+		"VertexNumber":4,
+		"CapacityFrom":16,
+		"CapacityTo":12
+		},
+		{
+		"VertexNumber":6,
+		"CapacityFrom":2,
+		"CapacityTo":13
+		}
+	]
+},
+{
+	"VertexNumber":6,
+	"Connections":[
+		{
+		"VertexNumber":4,
+		"CapacityFrom":19,
+		"CapacityTo":12
+		},
+		{
+		"VertexNumber":5,
+		"CapacityFrom":13,
+		"CapacityTo":2
+		},
+		{
+		"VertexNumber":7,
+		"CapacityFrom":4,
+		"CapacityTo":51
+		}
+	]
+},
+{
+	"VertexNumber":7,
+	"Connections":[
+		{
+		"VertexNumber":3,
+		"CapacityFrom":10,
+		"CapacityTo":12
+		},
+		{
+		"VertexNumber":6,
+		"CapacityFrom":51,
+		"CapacityTo":4
+		}
+	]
+}
+]
