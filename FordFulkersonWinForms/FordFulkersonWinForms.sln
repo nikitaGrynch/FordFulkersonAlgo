@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FordFulkersonWinForms", "FordFulkersonWinForms\FordFulkersonWinForms.csproj", "{3156735B-DE28-43E7-A0AE-5296DBB6331F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3156735B-DE28-43E7-A0AE-5296DBB6331F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3156735B-DE28-43E7-A0AE-5296DBB6331F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3156735B-DE28-43E7-A0AE-5296DBB6331F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3156735B-DE28-43E7-A0AE-5296DBB6331F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9A4EE08-9D78-4DFA-BB82-215F8A24BF50}
+	EndGlobalSection
+EndGlobal
