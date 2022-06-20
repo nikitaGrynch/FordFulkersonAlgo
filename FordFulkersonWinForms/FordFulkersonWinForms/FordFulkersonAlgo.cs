@@ -10,7 +10,9 @@ namespace FordFulkersonAlgo
 {
     internal class FordFulkersonAlgo
     {
+        private Vertex[] StartGraph;  // начальный граф
         private Vertex[] vertices;  // вершины графа
+        private ResVertex[] FiniteGraph;  // конечный граф
         public int sourceVertex;    // исток
         public int targetVertex;    // сток
         public int VertexCount;     // кол-во вершин
@@ -83,6 +85,7 @@ namespace FordFulkersonAlgo
                 res += route.MaxFlow;
             }
             resultStr += "\nMax network flow: " + res;
+            BuildFiniteGraph();
             return res;
         }
 
@@ -146,6 +149,35 @@ namespace FordFulkersonAlgo
 
         }
 
+        private void BuildFiniteGraph()             // построение конечного графа
+        {
+            FiniteGraph = new ResVertex[VertexCount];       // конечный граф
+            int i = 0;
+            foreach(var startVertex in StartGraph)          // проходимся по всему начальному графу
+            {
+                FiniteGraph[i].VertexNumber = StartGraph[i].VertexNumber;   // записываем номер вершины в конечный граф
+                FiniteGraph[i].Connections = new List<ResConnectedVertex>();
+                int j = 0;
+                foreach (var connectedVertex in startVertex.Connections)    // проходимся по всем связям начального графа
+                {
+                    if (vertices[i].Connections[j].CapacityFrom - StartGraph[i].Connections[j].CapacityFrom > 0)    // проверяем, что направление правильное
+                    {
+                        FiniteGraph[i].Connections.Add(new ResConnectedVertex   // добавляем новую вуршину в связанные вершины графа
+                        {
+                            VertexNumber = connectedVertex.VertexNumber,
+                            Capacity = vertices[i].Connections[j].CapacityFrom - StartGraph[i].Connections[j].CapacityFrom
+                        });
+                    }
+                    j++;
+                }
+                i++;
+            }
+            using (var jsonFile = new StreamWriter("FiniteGraph.json"))
+            {
+                jsonFile.Write(JsonSerializer.Serialize<ResVertex[]>(FiniteGraph));
+            }
+        }
+
         public void GetData()   // получение входных данных: граф, исток, сток
         {
 
@@ -164,10 +196,13 @@ namespace FordFulkersonAlgo
         {
             try
             {
+                StartGraph = JsonSerializer.Deserialize<Vertex[]>(json);
+                if (StartGraph == null)
+                    throw new Exception("IncorrectFile");
+                VertexCount = StartGraph.Count();
                 vertices = JsonSerializer.Deserialize<Vertex[]>(json);
                 if (vertices == null)
                     throw new Exception("IncorrectFile");
-                VertexCount = vertices.Count();
             }
             catch
             {
@@ -183,10 +218,22 @@ namespace FordFulkersonAlgo
 
         }
 
+        class ResConnectedVertex                      // вершина, которая связана с рассматриваемой вершиной
+        {
+            public int VertexNumber { get; set; }   // номер вершины
+            public int Capacity { get; set; }       // пропускная способность
+
+        }
+
         struct Vertex
         {
             public int VertexNumber { get; set; }
             public List<ConnectedVertex> Connections { get; set; } // отношения с другими вершинами
+        }
+        struct ResVertex
+        {
+            public int VertexNumber { get; set; }
+            public List<ResConnectedVertex> Connections { get; set; } // отношения с другими вершинами
         }
         struct VertexMark                           // метка маршрута
         {
