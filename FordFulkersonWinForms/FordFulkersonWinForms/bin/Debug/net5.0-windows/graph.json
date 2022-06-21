@@ -4,18 +4,13 @@
 	"Connections":[
 		{
 		"VertexNumber":2,
-		"CapacityFrom":36,
-		"CapacityTo":24
+		"CapacityFrom":0,
+		"CapacityTo":6
 		},
 		{
 		"VertexNumber":4,
-		"CapacityFrom":17,
-		"CapacityTo":41
-		},
-		{
-		"VertexNumber":5,
-		"CapacityFrom":15,
-		"CapacityTo":24
+		"CapacityFrom":0,
+		"CapacityTo":6
 		}
 	]
 },
@@ -24,13 +19,18 @@
 	"Connections":[
 		{
 		"VertexNumber":1,
-		"CapacityFrom":24,
-		"CapacityTo":36
+		"CapacityFrom":6,
+		"CapacityTo":0
 		},
 		{
 		"VertexNumber":3,
-		"CapacityFrom":26,
-		"CapacityTo":40
+		"CapacityFrom":2,
+		"CapacityTo":2
+		},
+		{
+		"VertexNumber":5,
+		"CapacityFrom":3,
+		"CapacityTo":3
 		}
 	]
 },
@@ -39,18 +39,23 @@
 	"Connections":[
 		{
 		"VertexNumber":2,
-		"CapacityFrom":40,
-		"CapacityTo":26
+		"CapacityFrom":2,
+		"CapacityTo":2
 		},
 		{
 		"VertexNumber":4,
-		"CapacityFrom":14,
-		"CapacityTo":4
+		"CapacityFrom":3,
+		"CapacityTo":3
 		},
 		{
-		"VertexNumber":7,
-		"CapacityFrom":12,
-		"CapacityTo":10
+		"VertexNumber":6,
+		"CapacityFrom":2,
+		"CapacityTo":2
+		},
+		{
+		"VertexNumber":5,
+		"CapacityFrom":2,
+		"CapacityTo":2
 		}
 	]
 },
@@ -59,23 +64,23 @@
 	"Connections":[
 		{
 		"VertexNumber":1,
-		"CapacityFrom":41,
-		"CapacityTo":17
+		"CapacityFrom":6,
+		"CapacityTo":0
 		},
 		{
 		"VertexNumber":3,
-		"CapacityFrom":4,
-		"CapacityTo":14
-		},
-		{
-		"VertexNumber":5,
-		"CapacityFrom":12,
-		"CapacityTo":16
+		"CapacityFrom":3,
+		"CapacityTo":3
 		},
 		{
 		"VertexNumber":6,
-		"CapacityFrom":12,
-		"CapacityTo":19
+		"CapacityFrom":1,
+		"CapacityTo":1
+		},
+		{
+		"VertexNumber":7,
+		"CapacityFrom":0,
+		"CapacityTo":2
 		}
 	]
 },
@@ -83,19 +88,19 @@
 	"VertexNumber":5,
 	"Connections":[
 		{
-		"VertexNumber":1,
-		"CapacityFrom":24,
-		"CapacityTo":15
+		"VertexNumber":2,
+		"CapacityFrom":3,
+		"CapacityTo":3
 		},
 		{
-		"VertexNumber":4,
-		"CapacityFrom":16,
-		"CapacityTo":12
+		"VertexNumber":3,
+		"CapacityFrom":2,
+		"CapacityTo":2
 		},
 		{
 		"VertexNumber":6,
-		"CapacityFrom":2,
-		"CapacityTo":13
+		"CapacityFrom":0,
+		"CapacityTo":5
 		}
 	]
 },
@@ -103,19 +108,19 @@
 	"VertexNumber":6,
 	"Connections":[
 		{
-		"VertexNumber":4,
-		"CapacityFrom":19,
-		"CapacityTo":12
-		},
-		{
-		"VertexNumber":5,
-		"CapacityFrom":13,
+		"VertexNumber":3,
+		"CapacityFrom":2,
 		"CapacityTo":2
 		},
 		{
+		"VertexNumber":4,
+		"CapacityFrom":1,
+		"CapacityTo":1
+		},
+		{
 		"VertexNumber":7,
-		"CapacityFrom":4,
-		"CapacityTo":51
+		"CapacityFrom":0,
+		"CapacityTo":5
 		}
 	]
 },
@@ -123,14 +128,19 @@
 	"VertexNumber":7,
 	"Connections":[
 		{
-		"VertexNumber":3,
-		"CapacityFrom":10,
-		"CapacityTo":12
+		"VertexNumber":5,
+		"CapacityFrom":5,
+		"CapacityTo":0
 		},
 		{
 		"VertexNumber":6,
-		"CapacityFrom":51,
-		"CapacityTo":4
+		"CapacityFrom":5,
+		"CapacityTo":0
+		},
+		{
+		"VertexNumber":4,
+		"CapacityFrom":2,
+		"CapacityTo":0
 		}
 	]
 }

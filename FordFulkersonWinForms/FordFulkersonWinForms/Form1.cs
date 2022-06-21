@@ -60,7 +60,7 @@ namespace FordFulkersonWinForms
 
         private void buttonStartAlgo_Click(object sender, EventArgs e)
         {
-            richTextBoxRoutes.Text = String.Empty;
+            richTextBoxResult.Text = String.Empty;
             if (!isJsonSelected)
             {
                 MessageBox.Show("Graph not selected");
@@ -79,7 +79,9 @@ namespace FordFulkersonWinForms
             algo.sourceVertex = (int)comboBoxSourceVertex.SelectedItem;
             algo.targetVertex = (int)comboBoxTargetVertex.SelectedItem;
             algo.GetMaxGraphFlow();
-            richTextBoxRoutes.Text = algo.resultStr;
+            algo.BuildFiniteGraph();
+            richTextBoxResult.Text = algo.resultStr;
+            
         }
     }
 }

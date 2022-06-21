@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxTargetVertex = new System.Windows.Forms.ComboBox();
             this.buttonSelectGraph = new System.Windows.Forms.Button();
-            this.richTextBoxRoutes = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
             this.labelStatusJson = new System.Windows.Forms.Label();
             this.buttonStartAlgo = new System.Windows.Forms.Button();
             this.openFileDialogSelectGraph = new System.Windows.Forms.OpenFileDialog();
@@ -85,14 +85,14 @@
             this.buttonSelectGraph.UseVisualStyleBackColor = true;
             this.buttonSelectGraph.Click += new System.EventHandler(this.buttonSelectGraph_Click);
             // 
-            // richTextBoxRoutes
+            // richTextBoxResult
             // 
-            this.richTextBoxRoutes.Location = new System.Drawing.Point(144, 86);
-            this.richTextBoxRoutes.Name = "richTextBoxRoutes";
-            this.richTextBoxRoutes.ReadOnly = true;
-            this.richTextBoxRoutes.Size = new System.Drawing.Size(488, 530);
-            this.richTextBoxRoutes.TabIndex = 4;
-            this.richTextBoxRoutes.Text = "";
+            this.richTextBoxResult.Location = new System.Drawing.Point(144, 86);
+            this.richTextBoxResult.Name = "richTextBoxResult";
+            this.richTextBoxResult.ReadOnly = true;
+            this.richTextBoxResult.Size = new System.Drawing.Size(488, 530);
+            this.richTextBoxResult.TabIndex = 4;
+            this.richTextBoxResult.Text = "";
             // 
             // labelStatusJson
             // 
@@ -125,7 +125,7 @@
             this.ClientSize = new System.Drawing.Size(644, 658);
             this.Controls.Add(this.buttonStartAlgo);
             this.Controls.Add(this.labelStatusJson);
-            this.Controls.Add(this.richTextBoxRoutes);
+            this.Controls.Add(this.richTextBoxResult);
             this.Controls.Add(this.buttonSelectGraph);
             this.Controls.Add(this.comboBoxTargetVertex);
             this.Controls.Add(this.comboBoxSourceVertex);
@@ -145,7 +145,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxTargetVertex;
         private System.Windows.Forms.Button buttonSelectGraph;
-        private System.Windows.Forms.RichTextBox richTextBoxRoutes;
+        private System.Windows.Forms.RichTextBox richTextBoxResult;
         private System.Windows.Forms.Label labelStatusJson;
         private System.Windows.Forms.Button buttonStartAlgo;
         private System.Windows.Forms.OpenFileDialog openFileDialogSelectGraph;

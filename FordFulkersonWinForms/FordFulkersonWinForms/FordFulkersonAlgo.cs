@@ -84,8 +84,8 @@ namespace FordFulkersonAlgo
             {
                 res += route.MaxFlow;
             }
-            resultStr += "\nMax network flow: " + res;
-            BuildFiniteGraph();
+            resultStr += "\nMax network flow: " + res + "\n\n";
+            
             return res;
         }
 
@@ -149,7 +149,7 @@ namespace FordFulkersonAlgo
 
         }
 
-        private void BuildFiniteGraph()             // построение конечного графа
+        public void BuildFiniteGraph()             // построение конечного графа
         {
             FiniteGraph = new ResVertex[VertexCount];       // конечный граф
             int i = 0;
@@ -175,6 +175,18 @@ namespace FordFulkersonAlgo
             using (var jsonFile = new StreamWriter("FiniteGraph.json"))
             {
                 jsonFile.Write(JsonSerializer.Serialize<ResVertex[]>(FiniteGraph));
+            }
+
+            resultStr += "Finite Graph\n";
+            foreach(var vertex in FiniteGraph)
+            {
+                resultStr += $"Vertex {vertex.VertexNumber}\n";
+                resultStr += "Connections:\n";
+                foreach (var connectedVertex in vertex.Connections)
+                {
+                    resultStr += $"Vertex: {connectedVertex.VertexNumber}, Capacity: {connectedVertex.Capacity}\n";
+                }
+                resultStr += "\n";
             }
         }
 
